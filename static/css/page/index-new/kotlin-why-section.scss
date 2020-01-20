@@ -1,0 +1,84 @@
+.kotlin-why-section {
+  padding-top: 92px;
+  padding-bottom: 96px;
+}
+
+.kto-features-list__feature {
+
+}
+
+.kto-features-list__short-info {
+  padding-left: 22px;
+}
+
+.kto-features-list__short-info::before {
+  display: block;
+  content: '';
+  height: 25px;
+  width: 20px;
+
+  margin-left: -22px;
+  float: left;
+}
+
+.kto-features-list__short-info::before {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.kto-features-list__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+
+  margin-top: 45px;
+}
+
+.kto-features-list__description {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.kto-features-list__content {
+  margin-top: 32px;
+}
+
+.kto-features-list__content > pre {
+  margin-top: 15px;
+}
+
+.kto-getting-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kto-getting-item {
+  width: 20.75%;
+}
+
+.kto-getting-item::before {
+  display: block;
+  content: '';
+
+  margin-bottom: 28px;
+
+  height: 48px;
+  width: 48px;
+}
+
+.kto-getting-item__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.kto-getting-item__description {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(39, 40, 44, 0.7);
+  margin-bottom: 18px;
+}

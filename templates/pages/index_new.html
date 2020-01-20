@@ -1,19 +1,206 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Kotlin Programming Language</title>
-    {% include 'inc/head.html' %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-</head>
-<body class="page_index_next">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P98"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+{% extends 'base.html' %}
 
-<div class="global-layout">
-    {% include 'inc/header.html' %}
-</div>
-<script src="{{ url_for('static', filename='index.js') }}"></script>
-</body>
-</html>
+{% block body_class %}page__index-new{% endblock %}
+
+{% block page_outer_content %}
+    <section class="kto-overview-section kto-overview-section_mode_dark kotlin-intro-section">
+        <div class="g-layout">
+            <p class="kotlin-intro-section__intro">
+                Programming language for <a target="_blank" href="#" class="kto-link">mobile cross-platform</a> and <a target="_blank"  class="kto-link"href="#">web development</a>,
+                <a target="_blank" href="#" class="kto-link">server-side</a>, <a target="_blank" href="#" class="kto-link">native</a> and <a target="_blank" href="#" class="kto-link">data science</a>.
+                Open source forever <a target="_blank" href="#" class="kto-link kto-icon kto-icon_name_github kotlin-intro-section__icon">Github</a>
+            </p>
+            <p class="kotlin-intro-section__buttons">
+                <a class="kto-button kto-button_theme_dark kto-button_size_m kto-button_mode_primary" href="#">Getting started</a>
+                <a class="kto-button kto-button_theme_dark kto-button_size_m kto-button_mode_outline" href="#">Try in the IDE</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="kto-overview-section kto-overview-section_mode_dark kotlin-banner-section">
+        <h2 class="kotlin-banner-section__title g-layout">Latest from Kotlin</h2>
+        <div class="kotlin-banner-section__banner">
+            <a target="_blank" class="kotlin-banner-section__link g-layout"
+               href="https://surveys.jetbrains.com/s3/kotlin-census-2019?_ga=2.199264750.1745688286.1579533764-545911044.1568735962"
+            >
+                <img
+                    alt="Kotlin Census 2020!" width="960"
+                    src="https://branch-census-banner.kotlin-web-site.labs.jb.gg/_assets/static/css/com/layout/images/banners/kt_census_20.png"
+                >
+            </a>
+        </div>
+    </section>
+
+    <section class="kto-overview-section kto-overview-section_mode_dark kotlin-news-section">
+        <div class="g-layout">
+            <div class="slides-container">
+                <div class="slide-item slide-1">
+                    <a href="/docs/reference/native-overview.html">Kotlin/Native
+                        <div class="slide-footer">reached beta</div>
+                    </a>
+                </div>
+                <div class="slide-item slide-2">
+                    <a href="/docs/reference/coroutines-overview.html">Coroutines
+                        <div class="slide-footer">are now stable</div>
+                    </a>
+                </div>
+                <div class="slide-item slide-3">
+
+                    <a href="/docs/reference/multiplatform.html">Multiplatform
+                        <div class="slide-footer">code reuse</div>
+                    </a>
+                </div>
+                <div class="slide-item slide-4">
+                    <a href="/docs/reference/">Learning Kits
+                        <div class="slide-footer">start easily</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kto-overview-section kto-overview-section_mode_dark kotlin-jump-section">
+        <div class="kotlin-jump-section__wrapper g-layout">
+            <div class="kotlin-jump-section__content">
+                <h2 class="kotlin-jump-section__title">Jump right in</h2>
+                <p>All the resources you need to learn Kotlin, in one place and easy to navigate</p>
+            </div>
+            <a class="kto-button kto-button_theme_dark kto-button_size_m kto-button_mode_outline" href="#"> Getting started</a>
+        </div>
+    </section>
+
+    <section class="kto-overview-section kto-overview-section_mode_dark kotlin-code-examples-section">
+        <div class="g-layout">
+            <h2 class="kotlin-code-examples-section__title">Try Kotlin</h2>
+            <div class="kotlin-overview-code-example-tabs">
+                <div class="overview-group">
+                    <div class="tab is_active js-tab" data-tab-id="kotlin-code-example-simplest">
+                        <div class="text">Simplest version</div>
+                    </div>
+                    <div class="tab js-tab" data-tab-id="kotlin-code-example-object-oriented">
+                        <div class="tab-text">An Object-oriented Hello</div>
+                    </div>
+                    <div class="tab js-tab" data-tab-id="kotlin-code-example-coroutine">
+                        <div class="tab-text">Coroutines</div>
+                    </div>
+                    <a class="tab overview-examples" href="https://play.kotlinlang.org/byExample/overview">
+                        <div class="tab-text">More examples</div>
+                        <span class="more-examples-icon"></span>
+                    </a>
+                </div>
+                <div class="kotlin-overview-code-example" id="kotlin-code-example-simplest">
+                    <pre theme="darcula" class="sample" auto-indent="true" data-min-compiler-version="1.3">
+                        package hello
+
+                        fun main() {
+                            println("Hello World")
+                        }
+                    </pre>
+                </div>
+
+                <!-- code example -->
+                <div class="kotlin-overview-code-example is_hidden" id="kotlin-code-example-object-oriented">
+                    <pre theme="darcula" class="sample" auto-indent="true" data-min-compiler-version="1.3" args="Kotlin">
+                        class Greeter(val name: String) {
+                            fun greet() {
+                                println("Hello, $name")
+                            }
+                        }
+
+                        fun main(args: Array&lt;String&gt;) {
+                            Greeter(args[0]).greet()
+                        }
+                    </pre>
+                </div>
+
+                <!-- code example -->
+                <div class="kotlin-overview-code-example is_hidden" id="kotlin-code-example-coroutine">
+                    <pre theme="darcula" class="sample" auto-indent="true" folded-button="false" data-min-compiler-version="1.3">
+                        import kotlinx.coroutines.*
+
+                        //sampleStart
+                        suspend fun main() = coroutineScope {
+                            for (i in 0 until 10) {
+                                launch {
+                                    delay(1000L - i * 10)
+                                    print("❤️$i ")
+                                }
+                            }
+                        }
+                        //sampleEnd
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kto-overview-section kotlin-why-section">
+        <div class="g-layout">
+            <h2 class="kto-overview-section__title">Why Kotlin?</h2>
+            <ul class="kto-features-list">
+                {% for feature in features %}
+                    <li class="kto-features-list__feature kto-features-list__feature_{{ feature.id }}">
+                        <div class="kto-features-list__short-info">
+                            <h3 class="kto-features-list__title">{{ feature.title | safe }}</h3>
+                            <p class="kto-features-list__description">{{ feature.description | safe }}</p>
+                        </div>
+                        <div class="kto-features-list__content">
+                            {{ feature.content | safe }}
+
+                            {% if feature.id == "tool-friendly" %}
+                                <ul class="kto-getting-list g-layout">
+                                    {% macro render_get_kotlin_item(id, title, description, instructions, download="") -%}
+                                        <li class="kto-getting-item kto-getting-item_{{ id }}">
+                                            <h3 class="kto-getting-item__title">{{ title }}</h3>
+                                            <p class="kto-getting-item__description"> {{ caller() }}</p>
+                                            <a href="{{ download }}" class="kto-getting-item__download">Download</a>
+                                            <a href="{{ instructions }}" class="kto-getting-item__instruction">Instructions</a>
+                                        </li>
+                                    {%- endmacro %}
+
+                                    {% call render_get_kotlin_item(id="intellij-idea", title="IntelliJ IDEA", instructions="/docs/tutorials/getting-started.html") %}
+                                        Bundled with Community Edition or IntelliJ IDEA Ultimate
+                                    {% endcall %}
+
+                                    {% call render_get_kotlin_item(id="android-studio", title="Android Studio", instructions="/docs/tutorials/kotlin-android.html") %}
+                                        Bundled with <a href="https://developer.android.com/studio/" target="_blank">Studio 3.0</a>, plugin available for earlier versions
+                                    {% endcall %}
+
+                                    {% call render_get_kotlin_item(id="eclipse", title="Eclipse", instructions="/docs/tutorials/getting-started-eclipse.html") %}
+                                        Install the plugin from the Eclipse Marketplace
+                                    {% endcall %}
+
+                                    {% call render_get_kotlin_item(id="standalone-compiler", title="Standalone Compiler", instructions="/docs/tutorials/command-line.html") %}
+                                        Use any editor and build from the command line
+                                    {% endcall %}
+                                </ul>
+                            {% endif %}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <section class="kto-overview-section kotlin-highlights-section">
+        <div class="g-layout">
+            <h2 class="kto-overview-section__title kotlin-highlights-section__title">Kotlin Usage Highlights</h2>
+            <ul class="kto-highlights">
+                {% for testimonial in data.testimonials %}
+                    <li class="kto-highlights-item">
+                        <h3 class="kto-highlights-item__header">{{ testimonial.company | safe }}</h3>
+                        <div class="kto-highlights-item__text">{{ testimonial.text | safe }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css')|autoversion }}">
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='index.js')|autoversion }}"></script>
+{% endblock %}

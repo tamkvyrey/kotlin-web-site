@@ -16,6 +16,10 @@
 @import 'com/toc/toc.scss';
 @import 'page/books.scss';
 @import 'page/multi-language-samples.scss';
-@import 'page/index_new.scss';
+
+@import 'components/kto-button.scss';
+@import 'components/kto-icon.scss';
+
+@import 'static/css/page/index-new/index_new';
 
 @import url("//resources.jetbrains.com/storage/ui/logos/logos.css");

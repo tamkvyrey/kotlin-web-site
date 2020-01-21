@@ -64,8 +64,25 @@
 
   margin-bottom: 28px;
 
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 48px;
+  background-size: contain;
+
   height: 48px;
   width: 48px;
+}
+
+.kto-getting-item_android-studio::before {
+  background-image: url("../index/images/android_studio.svg");
+}
+
+.kto-getting-item_eclipse::before {
+  background-image: url("../index/images/eclipse.svg");
+}
+
+.kto-getting-item_standalone-compiler::before {
+  background-image: url("../index/images/standalone-compiler.svg");
 }
 
 .kto-getting-item__title {

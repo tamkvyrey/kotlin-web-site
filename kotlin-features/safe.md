@@ -1,3 +1,4 @@
+<div class="sample" markdown="1" mode="kotlin" theme="idea" data-highlight-only="1" auto-indent="false">
 ``` kotlin
 /*
  Get rid of those pesky NullPointerExceptions, you know, The Billion Dollar Mistake
@@ -5,16 +6,12 @@
 
 var output: String
 output = null   // Compilation error
-```
 
-``` kotlin
 // Kotlin protects you from mistakenly operating on nullable types
 
 val name: String? = null    // Nullable type
 println(name.length())      // Compilation error
-```
 
-``` kotlin
 // And if you check a type is right, the compiler will auto-cast it for you
 
 fun calculateTotal(obj: Any) {
@@ -22,3 +19,4 @@ fun calculateTotal(obj: Any) {
         obj.calculateTotal()
 }
 ```
+</div>

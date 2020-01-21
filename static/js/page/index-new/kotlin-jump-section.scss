@@ -19,9 +19,16 @@
   display: block;
   content: '';
   width: 56px;
-  height: 40px;
+  height: 62px;
   margin-left: -85px;
   float: left;
+
+  background-image: url('images/jump.svg');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 56px 62px;
+  background-size: contain;
+
 }
 
 .kotlin-jump-section__title {
@@ -29,4 +36,6 @@
   font-size: 18px;
   line-height: 26px;
   color: #fff;
+
+  margin-top: 6px;
 }

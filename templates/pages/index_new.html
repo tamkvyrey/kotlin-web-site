@@ -87,16 +87,20 @@
 
                             {% if feature.id == "tool-friendly" %}
                                 <ul class="kto-getting-list g-layout">
-                                    {% macro render_get_kotlin_item(id, title, description, instructions, download="") -%}
-                                        <li class="kto-getting-item kto-getting-item_{{ id }}">
-                                            <h3 class="kto-getting-item__title">{{ title }}</h3>
-                                            <p class="kto-getting-item__description"> {{ caller() }}</p>
-                                            <a href="{{ download }}" class="kto-getting-item__download">Download</a>
-                                            <a href="{{ instructions }}" class="kto-getting-item__instruction">Instructions</a>
+                                    {% macro render_get_kotlin_item(id, title, description, instructions, download="", className="") -%}
+                                        <li class="kto-getting-item kto-getting-item_{{ id }} {{ className }}">
+                                            <div>
+                                                <h3 class="kto-getting-item__title">{{ title }}</h3>
+                                                <p class="kto-getting-item__description"> {{ caller() }}</p>
+                                            </div>
+                                            <div>
+                                                <a href="{{ download }}" class="kto-getting-item__download">Download</a>
+                                                <a href="{{ instructions }}" class="kto-getting-item__instruction">Instructions</a>
+                                            </div>
                                         </li>
                                     {%- endmacro %}
 
-                                    {% call render_get_kotlin_item(id="intellij-idea", title="IntelliJ IDEA", instructions="/docs/tutorials/getting-started.html") %}
+                                    {% call render_get_kotlin_item(id="intellij-idea", title="IntelliJ IDEA", instructions="/docs/tutorials/getting-started.html", className="jetbrains-logo _logo-intellij-idea") %}
                                         Bundled with Community Edition or IntelliJ IDEA Ultimate
                                     {% endcall %}
 

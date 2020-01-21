@@ -94,10 +94,14 @@
 }
 
 .kto-getting-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 20.75%;
 }
 
-.kto-getting-item::before {
+.kto-getting-item__content::before {
   display: block;
   content: '';
 
@@ -112,15 +116,15 @@
   width: 48px;
 }
 
-.kto-getting-item_android-studio::before {
+.kto-getting-item_android-studio .kto-getting-item__content::before {
   background-image: url("images/logos/android-studio.svg");
 }
 
-.kto-getting-item_eclipse::before {
+.kto-getting-item_eclipse .kto-getting-item__content::before {
   background-image: url("images/logos/eclipse.svg");
 }
 
-.kto-getting-item_standalone-compiler::before {
+.kto-getting-item_standalone-compiler .kto-getting-item__content::before {
   background-image: url("images/logos/standalone-compiler.svg");
 }
 

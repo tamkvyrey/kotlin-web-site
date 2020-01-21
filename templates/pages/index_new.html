@@ -89,7 +89,7 @@
                                 <ul class="kto-getting-list g-layout">
                                     {% macro render_get_kotlin_item(id, title, description, instructions, download="", className="") -%}
                                         <li class="kto-getting-item kto-getting-item_{{ id }} {{ className }}">
-                                            <div>
+                                            <div class="kto-getting-item__content">
                                                 <h3 class="kto-getting-item__title">{{ title }}</h3>
                                                 <p class="kto-getting-item__description"> {{ caller() }}</p>
                                             </div>

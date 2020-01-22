@@ -90,8 +90,22 @@ const initPopups = function () {
     popups.init();
 };
 
+const initAnchors = function () {
+    $('.smooth-anchor').on('click', function(e) {
+        const id = (e.target.getAttribute('href') || '').substring(1);
+        if (id) {
+            const el = $('#' + id)[0];
+            if (el) {
+                e.preventDefault();
+                el.scrollIntoView({behavior: 'smooth'});
+            }
+        }
+    })
+};
+
 $(document).ready(function () {
     kotlinPlayground('.sample')
     initPopups();
     initTabs();
+    initAnchors();
 });

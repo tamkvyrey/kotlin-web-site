@@ -226,7 +226,15 @@ def collections_redirect():
 @app.route('/')
 def index_page():
     features = get_kotlin_features()
-    return render_template('pages/index_new.html',
+    return render_template('pages/index.html',
+                           is_index_page=True,
+                           features=features
+                           )
+
+@app.route('/index_old.html')
+def index_page_old():
+    features = get_kotlin_features()
+    return render_template('pages/index_old.html',
                            is_index_page=True,
                            features=features
                            )

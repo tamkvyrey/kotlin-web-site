@@ -6,9 +6,9 @@
     <section class="kto-overview-section kto-overview-section_mode_dark kotlin-intro-section">
         <div class="g-layout">
             <p class="kotlin-intro-section__intro">
-                Programming language for <a target="_blank" href="#" class="kto-link">mobile cross-platform</a> and <a target="_blank"  class="kto-link"href="#">web development</a>,
-                <a target="_blank" href="#" class="kto-link">server-side</a>, <a target="_blank" href="#" class="kto-link">native</a> and <a target="_blank" href="#" class="kto-link">data science</a>.
-                Open source forever <a target="_blank" href="#" class="kto-link kto-icon kto-icon_name_github kotlin-intro-section__icon">Github</a>
+                Programming language for <!--<a target="_blank" href="#" class="kto-link">mobile cross-platform</a>--->mobile cross-platform<br>
+                and web development, server-side, native<br>
+                and data science. Open source forever <a target="_blank" href="https://github.com/JetBrains/kotlin" class="kto-link kotlin-intro-section__icon">Github</a>
             </p>
             <p class="kotlin-intro-section__buttons">
                 <a class="kto-button kto-button_theme_dark kto-button_size_m kto-button_mode_primary" href="#try-kotlin-anchor">Getting started</a>
@@ -87,24 +87,26 @@
 
                             {% if feature.id == "tool-friendly" %}
                                 <ul class="kto-getting-list g-layout">
-                                    {% macro render_get_kotlin_item(id, title, description, instructions, download="", className="") -%}
+                                    {% macro render_get_kotlin_item(id, title, description, instructions, download, className="") -%}
                                         <li class="kto-getting-item kto-getting-item_{{ id }} {{ className }}">
                                             <div class="kto-getting-item__content">
                                                 <h3 class="kto-getting-item__title">{{ title }}</h3>
                                                 <p class="kto-getting-item__description"> {{ caller() }}</p>
                                             </div>
                                             <div>
-                                                <a href="{{ download }}" class="kto-getting-item__download">Download</a>
+                                                {% if download %}<a href="{{ download }}" target="_blank" class="kto-getting-item__download">Download</a>{% endif %}
                                                 <a href="{{ instructions }}" class="kto-getting-item__instruction">Instructions</a>
                                             </div>
                                         </li>
                                     {%- endmacro %}
 
-                                    {% call render_get_kotlin_item(id="intellij-idea", title="IntelliJ IDEA", instructions="/docs/tutorials/getting-started.html", className="jetbrains-logo _logo-intellij-idea") %}
+                                    {% call render_get_kotlin_item(id="intellij-idea", title="IntelliJ IDEA", className="jetbrains-logo _logo-intellij-idea",
+                                                instructions="/docs/tutorials/getting-started.html", download="https://www.jetbrains.com/idea/download/") %}
                                         Bundled with Community Edition or IntelliJ IDEA Ultimate
                                     {% endcall %}
 
-                                    {% call render_get_kotlin_item(id="android-studio", title="Android Studio", instructions="/docs/tutorials/kotlin-android.html") %}
+                                    {% call render_get_kotlin_item(id="android-studio", title="Android Studio",
+                                                instructions="/docs/tutorials/kotlin-android.html",  download="https://developer.android.com/studio/") %}
                                         Bundled with <a href="https://developer.android.com/studio/" target="_blank">Studio 3.0</a>, plugin available for earlier versions
                                     {% endcall %}
 

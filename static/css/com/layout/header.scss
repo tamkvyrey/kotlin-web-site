@@ -103,7 +103,7 @@
   position: relative;
   top: 12px;
   float: left;
-  width: 103px;
+  min-width: 103px;
   height: 22px;
   background: url('images/logos-sprite.png') no-repeat;
   font-size: 0;
@@ -113,4 +113,13 @@
     background-image: url('images/logos-sprite@2x.png');
     background-size: 200px 100px;
   }
+}
+
+.global-header-logo__version {
+  position: static;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  margin-left: 109px;
+  color: #fff;
 }

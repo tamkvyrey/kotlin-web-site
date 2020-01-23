@@ -154,3 +154,13 @@
 .kto-getting-item__download {
   margin-right: 10px;
 }
+
+.kto-getting-item__download::after {
+  display: inline-block;
+  content: '';
+  background: url('images/external-link-marker_link.svg') center bottom no-repeat;
+  background-size: 8px;
+  margin-left: 4px;
+  height: 8px;
+  width: 8px;
+}

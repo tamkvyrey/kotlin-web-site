@@ -21,6 +21,11 @@ a.kotlin-news-section-news__item {
 
   &:hover {
     text-decoration: none;
+    outline: 1px solid #FFFFFF;
+  }
+
+  &:active {
+    outline: 2px solid #6B70FC;
   }
 }
 
@@ -45,3 +50,4 @@ a.kotlin-news-section-news__item {
   line-height: 28px;
   letter-spacing: -0.01em;
 }
+

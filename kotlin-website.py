@@ -147,6 +147,12 @@ def add_data_to_context():
         }
     }
 
+@app.template_filter('get_domain')
+def get_domain(url):
+    return urlparse(url).netloc
+
+app.jinja_env.globals['get_domain'] = get_domain
+
 @app.template_filter('autoversion')
 def autoversion_filter(filename):
     asset_version = get_asset_version(filename)

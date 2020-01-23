@@ -84,6 +84,10 @@
   margin-left: -17px;
 }
 
+.kto-features-list__feature_tool-friendly .kto-features-list__content {
+  margin-left: -38px;
+}
+
 .kto-features-list__content > pre {
   margin-top: 15px;
 }
@@ -137,15 +141,14 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-  color: #000;
   margin-bottom: 8px;
 }
 
 .kto-getting-item__description {
   font-size: 14px;
   line-height: 24px;
-  color: rgba(39, 40, 44, 0.7);
   margin-bottom: 18px;
+  color: rgba(39, 40, 44, .7);
 }
 
 .kto-getting-item__download {

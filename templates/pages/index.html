@@ -11,8 +11,8 @@
                 and data science. Open source forever <a target="_blank" href="https://github.com/JetBrains/kotlin" class="kto-link kotlin-intro-section__icon">Github</a>
             </p>
             <p class="kotlin-intro-section__buttons">
-                <a class="kto-button kto-button_theme_dark kto-button_size_m kto-button_mode_primary smooth-anchor" href="#try-kotlin-anchor">Getting started</a>
-                <a class="kto-button kto-button_theme_dark kto-button_size_m kto-button_mode_outline" href="/docs/tutorials/getting-started.html">Try in the IDE</a>
+                <a class="kto-button kto-button_theme_dark kto-button_size_m kto-button_mode_primary smooth-anchor" href="#try-kotlin">Getting started</a>
+                <a class="kotlin-banner-section__try-ide" href="/docs/tutorials/getting-started.html">Try in the IDE</a>
             </p>
         </div>
     </section>
@@ -32,30 +32,20 @@
     </section>
 
     <section class="kto-overview-section kto-overview-section_mode_dark kotlin-news-section">
-        <div class="g-layout">
-            <div class="slides-container">
-                <div class="slide-item slide-1">
-                    <a href="/docs/reference/native-overview.html">Kotlin/Native
-                        <div class="slide-footer">reached beta</div>
-                    </a>
-                </div>
-                <div class="slide-item slide-2">
-                    <a href="/docs/reference/coroutines-overview.html">Coroutines
-                        <div class="slide-footer">are now stable</div>
-                    </a>
-                </div>
-                <div class="slide-item slide-3">
-
-                    <a href="/docs/reference/multiplatform.html">Multiplatform
-                        <div class="slide-footer">code reuse</div>
-                    </a>
-                </div>
-                <div class="slide-item slide-4">
-                    <a href="/docs/reference/">Learning Kits
-                        <div class="slide-footer">start easily</div>
-                    </a>
-                </div>
-            </div>
+        <div class="kotlin-news-section-news g-layout">
+            {% for news in site.data["last-news"] %}
+                {% set domain_link = get_domain(news.link) %}
+                <a class="kotlin-news-section-news__item" href="{{ news.link }}"{% if domain_link %} target="_blank"{% endif %}>
+                    <span class="kotlin-news-section-news__title">
+                        {{ news.title }}
+                    </span>
+                    <span class="kotlin-news-section-news__tag{% if domain_link %} kotlin-news-section-news__tag_external{% endif %}">
+                        {% if news.tag %}{{ news.tag }}
+                        {% elif domain_link %}{{ domain_link }}
+                        {% else %}Overview{% endif %}
+                    </span>
+                </a>
+            {% endfor %}
         </div>
     </section>
 
@@ -69,7 +59,7 @@
         </div>
     </section>
 
-    <a id="try-kotlin-anchor"></a>
+    <a id="try-kotlin"></a>
     {% include 'inc/pages/index/code-examples.html' %}
 
     <section class="kto-overview-section kotlin-why-section">

@@ -33,9 +33,9 @@
   box-shadow: rgba(22, 125, 255, 0.80) 0 0 0 4px;
 }
 
-.kto-button:hover,
-.kto-button:focus,
-.kto-button:active {
+.kto-button:hover, .kto-button:focus, .kto-button:active,
+a.kto-button:hover, a.kto-button:focus, a.kto-button:active {
+a.kto-button:hover, a.kto-button:focus, a.kto-button:active {
   outline: none;
   text-decoration: none;
 }

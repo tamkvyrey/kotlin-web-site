@@ -4,8 +4,7 @@
 @import '../../../css/com/_bits/_code';
 @import '../../../css/com/_syntax-highlight/_syntax-highlight_dark';
 
-.page__index-new .global-header-panel,
-.page__index-new .global-footer-terms {
+.page__index-new .global-header-panel {
   background-color: #2b2b2b;
 }
 
@@ -17,6 +16,10 @@
 .kto-overview-section a {
   color: #6B70FC;
   text-decoration: none;
+}
+
+.kto-overview-section a:hover {
+  text-decoration: underline;
 }
 
 .kto-overview-section {
@@ -40,9 +43,9 @@
   line-height: 41px;
 }
 
-
 @import "kotlin-intro-section";
 @import "kotlin-banner-section";
+@import "kotlin-news-section";
 @import "kotlin-jump-section";
 @import "kotlin-code-examples-section";
 @import "kotlin-why-section";

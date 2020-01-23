@@ -32,20 +32,22 @@
     </section>
 
     <section class="kto-overview-section kto-overview-section_mode_dark kotlin-news-section">
-        <div class="kotlin-news-section-news g-layout">
-            {% for news in site.data["last-news"] %}
-                {% set domain_link = get_domain(news.link) %}
-                <a class="kotlin-news-section-news__item" href="{{ news.link }}"{% if domain_link %} target="_blank"{% endif %}>
-                    <span class="kotlin-news-section-news__title">
-                        {{ news.title }}
-                    </span>
-                    <span class="kotlin-news-section-news__tag{% if domain_link %} kotlin-news-section-news__tag_external{% endif %}">
-                        {% if news.tag %}{{ news.tag }}
-                        {% elif domain_link %}{{ domain_link }}
-                        {% else %}Overview{% endif %}
-                    </span>
-                </a>
-            {% endfor %}
+        <div class="g-layout">
+            <div class="kotlin-news-section-news">
+                {% for news in site.data["last-news"] %}
+                    {% set domain_link = get_domain(news.link) %}
+                    <a class="kotlin-news-section-news__item" href="{{ news.link }}"{% if domain_link %} target="_blank"{% endif %}>
+                        <span class="kotlin-news-section-news__title">
+                            {{ news.title }}
+                        </span>
+                        <span class="kotlin-news-section-news__tag{% if domain_link %} kotlin-news-section-news__tag_external{% endif %}">
+                            {% if news.tag %}{{ news.tag }}
+                            {% elif domain_link %}{{ domain_link }}
+                            {% else %}Overview{% endif %}
+                        </span>
+                    </a>
+                {% endfor %}
+            </div>
         </div>
     </section>
 

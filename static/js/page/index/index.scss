@@ -22,6 +22,14 @@
   text-decoration: underline;
 }
 
+.kto-overview-section a.kto-button,
+.kto-overview-section a.kto-button:hover,
+.kto-overview-section a.kto-button:active,
+.kto-overview-section a.kto-button:visited,
+.kto-overview-section a.kto-button:any-link {
+  text-decoration: none;
+}
+
 .kto-overview-section {
   padding-top: 40px;
 }

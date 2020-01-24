@@ -11,6 +11,13 @@
 .kto-overview-section {
   font-family: Inter-UI, Arial, sans-serif;
   color: #27282C;
+
+  padding-top: 40px;
+}
+
+.kto-overview-section_mode_dark {
+  background-color: #2b2b2b;
+  color: #F4F4F4;
 }
 
 .kto-overview-section a {
@@ -30,25 +37,10 @@
   text-decoration: none;
 }
 
-.kto-overview-section {
-  padding-top: 40px;
-}
-
-.kto-overview-section_mode_dark {
-  background-color: #2b2b2b;
-  color: #F4F4F4;
-}
-
 .kto-overview-section__title {
   font-weight: bold;
   font-size: 45px;
   line-height: 52px;
-}
-
-.kotlin-code-examples-section__title {
-  font-weight: bold;
-  font-size: 31px;
-  line-height: 41px;
 }
 
 @import "kotlin-intro-section";
@@ -58,7 +50,3 @@
 @import "kotlin-code-examples-section";
 @import "kotlin-why-section";
 @import "kotlin-highlights-section";
-
-.kotlin-highlights-section {
-  background: #F5F5F5;
-}

@@ -1,6 +1,5 @@
 - title: Making Kotlin Ready for Data Science
   link: https://blog.jetbrains.com/kotlin/2019/12/making-kotlin-ready-for-data-science/
-  tag: Overview
 
 - title: Coroutines are now stable
   link: /docs/reference/coroutines-overview.html
